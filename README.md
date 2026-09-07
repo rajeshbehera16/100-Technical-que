@@ -1404,34 +1404,27 @@ int *p = &x;
 
 Stores the memory address of another variable.
 
-## 98. Stack vs heap
+## 98. Stack vs Heap
 
+| Stack                                               | Heap                                               |
+| --------------------------------------------------- | -------------------------------------------------- |
+| Used for function calls and local automatic storage | Used for dynamically allocated memory              |
+| Automatically managed                               | In C, manually managed using `malloc()` / `free()` |
+| Generally faster                                    | Generally more flexible                            |
+| Limited in size                                     | Usually larger                                     |
 
-| Stack | Heap |
-| --- | --- |
-| Used for | Used for |
-| function | dynamicall |
-| calls/local | y allocated |
-| automatic | memory |
-| storage |   |
-| Automatica | In C, |
-| lly | manually |
-| managed | managed |
-|   | using |
-|   | malloc/ |
-|   | free |
-| Generally | Generally |
-| faster | more |
-|   | flexible |
-| Limited in | Usually |
-| size | larger |
+### Example in C
 
-## Example in C:
-
+```c
+int x = 10;                       // Automatic storage
+int *p = malloc(sizeof(int));     // Dynamic allocation
 ```
-int x = 10; // automatic storage
-int *p = malloc(sizeof(int)); // dynamic allocation
-```
+
+### Key Difference
+
+* **Stack:** Used mainly for function calls and automatic/local variables.
+* **Heap:** Used for memory that is dynamically allocated at runtime.
+
 
 ## 99. What is structure?
 
